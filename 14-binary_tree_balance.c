@@ -1,9 +1,13 @@
 #include "binary_trees.h"
 
 /**
+ * binary_tree_balance - Measures the difference in balance
+ * @tree: Pointer to the tree
+ *
+ * Return: Differnce in balance
  */
- int binary_tree_balance(const binary_tree_t *tree)
- {
+int binary_tree_balance(const binary_tree_t *tree)
+{
 	size_t size1;
 	size_t size2;
 	size_t size_dif;
@@ -14,4 +18,4 @@
 	size2 = binary_tree_balance(tree->right);
 	size_dif = (size1 - size2);
 	return (size_dif);
- }
+}
