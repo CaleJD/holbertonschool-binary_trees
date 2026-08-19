@@ -10,6 +10,8 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
 	if (node == NULL)
 		return (NULL);
+	if (node->parent == NULL)
+		return (NULL);
 	if (node == node->parent->left && node->parent->right != NULL)
 		return (node->parent->right);
 	if (node == node->parent->right && node->parent->left != NULL)
